@@ -1,25 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D3.js</title>
-  <style>
-    .container {
-      width: 250px;
-      height: 200px;
-      border: 1px solid #720570;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3.js</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
 
-    .bar {
-      fill: #720570;
-    }
-  </style>
-  <script src="https://d3js.org/d3.v5.min.js" defer></script>
-  <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <svg></svg>
-</body>
+      #app {
+        display: flex;
+        margin: 2rem 1rem;
+      }
+
+      #chart {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        padding: 1rem;
+      }
+
+      #chart,
+      #data {
+        margin: 0 2rem;
+      }
+
+      #data ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #data li {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+        width: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+      }
+
+      .bar {
+        fill: #4f009e;
+      }
+
+      .label {
+        fill: #4f009e;
+      }
+    </style>
+    <script src="https://d3js.org/d3.v5.min.js" defer></script>
+    <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="chart">
+        <svg></svg>
+      </div>
+      <div id="data">
+        <ul></ul>
+      </div>
+    </div>
+  </body>
 </html>
